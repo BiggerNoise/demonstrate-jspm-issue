@@ -33,8 +33,6 @@
     "buildConfig": {
       "transpileES6": true,
       "minify": true
-    },
-    "overrides": {
     }
   },
   "devDependencies": {
@@ -46,7 +44,7 @@
     "gulp-rename": "^1.2.2",
     "gulp-template": "^3.0.0",
     "gulp-uglify": "^1.2.0",
-    "jspm": "0.16.36",
+    "jspm": "0.16.39",
     "yargs": "^3.10.0"
   }
 }
