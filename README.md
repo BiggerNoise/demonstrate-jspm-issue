@@ -1,4 +1,4 @@
-This project demonstrates an issue that I have observed on Windows 10 x64
+This project demonstrates an [issue](https://github.com/jspm/jspm-cli/issues/1919) that I have observed with jspm on Windows 10 x64
 
 To reproduce:
 -----
@@ -42,3 +42,20 @@ $ gulp build
 [10:02:30] Starting 'build'...
 [10:02:32] Finished 'build' after 2.15 s
 ```
+
+Better workaround:
+
+Edit Gulpfile.js so that the resolveTo function reads as:
+
+```javascript
+var resolveTo = function(resolvePath) {
+	return function(glob) {
+		glob = glob || '';
+		return path.join(root, resolvePath, glob).replace(/\\/g, '/');
+	}
+};
+```
+
+*just append the replace to the path.join() command.*
+
+Thanks to @guybedford at jspm for the workaround!
