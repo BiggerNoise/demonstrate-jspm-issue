@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Some Random App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <toast></toast>
+    <app></app>
+    
+    <!-- build:js -->
+    <script src="jspm_packages/system.js"></script>
+    <script src="jspm.config.js"></script>
+    <script>
+      System.import('app/app').catch(console.error.bind(console));
+    </script>
+
+    <!-- endbuild -->
+</body>
+
+</html>
